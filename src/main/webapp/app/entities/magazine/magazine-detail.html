@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span>Magazine</span> {{vm.magazine.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span>Title</span></dt>
+        <dd>
+            <span>{{vm.magazine.title}}</span>
+        </dd>
+        <dt><span>Author</span></dt>
+        <dd>
+            <a ui-sref="author-detail({id:vm.magazine.author.id})">{{vm.magazine.author.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="magazine-detail.edit({id:vm.magazine.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>
